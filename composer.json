@@ -1,0 +1,27 @@
+{
+    "name": "ozarko/containerable",
+    "description": "This package will allow you to split the code into separate containers.",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Andrew Ozarko",
+            "email": "andrewozarko@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Ozarko\\Containerable\\": "src"
+        }
+    },
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ozarko\\Containerable\\ContainerServiceProvider"
+            ]
+        }
+    }
+}
