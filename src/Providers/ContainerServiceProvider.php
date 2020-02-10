@@ -5,6 +5,7 @@ namespace Ozarko\Containerable\Providers;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 use Ozarko\Containerable\Commands\ContainerableInstallCommand;
+use Ozarko\Containerable\Commands\MakeControllerCommand;
 use Ozarko\Containerable\Services\Container;
 
 class ContainerServiceProvider extends ServiceProvider
@@ -20,6 +21,8 @@ class ContainerServiceProvider extends ServiceProvider
         {
             return new Container();
         });
+
+        $this->app->register(ConfigServiceProvider::class);
     }
 
     /**
@@ -33,6 +36,7 @@ class ContainerServiceProvider extends ServiceProvider
 
             $this->commands([
                 ContainerableInstallCommand::class,
+                MakeControllerCommand::class,
             ]);
         }
     }

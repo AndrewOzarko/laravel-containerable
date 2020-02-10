@@ -1,0 +1,10 @@
+<?php
+
+namespace {{namespace}}\{{container-name}}\Http\Controllers;
+
+use Ozarko\Containerable\Parents\Controller as ParentController;
+
+class {{controller-name}} extends ParentController
+{
+
+}
